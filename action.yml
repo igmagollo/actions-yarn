@@ -19,3 +19,4 @@ runs:
   env:
     NPM_AUTH_TOKEN: ${{ inputs.auth-token }}
     NPM_REGISTRY_URL: ${{ inputs.registry-url }}
+    SSH_PRIVATE_KEY: ${{ inputs.ssh-private-key }}
