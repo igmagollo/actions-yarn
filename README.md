@@ -51,4 +51,5 @@ To authenticate with, and publish to, a registry other than `registry.npmjs.org`
   with:
     auth-token: ${{ secrets.NPM_TOKEN }}
     registry-url: someOtherRegistry.someDomain.net
+    ssh-private-key:  ${{ secrets.SSH_PRIVATE_KEY }}
 ```
