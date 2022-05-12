@@ -19,4 +19,8 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
   chmod 0600 "$NPM_CONFIG_USERCONFIG"
 fi
 
+if [ -n "$SSH_PRIVATE_KEY" ]; then
+  echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa
+fi
+
 sh -c "yarn $*"
