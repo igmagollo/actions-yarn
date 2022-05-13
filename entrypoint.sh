@@ -28,7 +28,6 @@ if [ -n "$SSH_PRIVATE_KEY" ]; then
   ssh-keyscan github.com >> /root/.ssh/known_hosts
   chmod 644 /root/.ssh/known_hosts
   echo "Não tem como, forget padrin"
-  exit
 fi
 
 echo "Iniciando yarn $*"
