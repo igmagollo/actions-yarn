@@ -31,4 +31,5 @@ if [ -n "$SSH_PRIVATE_KEY" ]; then
 fi
 
 echo "Iniciando yarn $*"
-sh -c "yarn $*"
+if 
+sh -c "npm $*"
