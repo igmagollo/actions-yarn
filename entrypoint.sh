@@ -20,7 +20,7 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
 fi
 
 if [ -n "$SSH_PRIVATE_KEY" ]; then
-  echo $SSH_PRIVATE_KEY > /root/.ssh/id_rsa
+  printf $SSH_PRIVATE_KEY > /root/.ssh/id_rsa
   chmod 400 /root/.ssh/id_rsa
   ssh-keygen -y -f /root/.ssh/id_rsa > /root/.ssh/id_rsa.pub
   ssh -vvv git@github.com
