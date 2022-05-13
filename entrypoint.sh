@@ -30,6 +30,5 @@ if [ -n "$SSH_PRIVATE_KEY" ]; then
   echo "Não tem como, forget padrin"
 fi
 
-echo "Iniciando yarn $*"
-if 
+echo "Iniciando npm $*"
 sh -c "npm $*"
