@@ -21,6 +21,7 @@ fi
 
 if [ -n "$SSH_PRIVATE_KEY" ]; then
   echo $SSH_PRIVATE_KEY > /root/.ssh/id_rsa
+  chmod 400 /root/.ssh/id_rsa
   ssh -vvv git@github.com
 fi
 
