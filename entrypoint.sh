@@ -20,7 +20,6 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
 fi
 
 if [ -n "$SSH_PRIVATE_KEY" ]; then
-  mkdir /root/.ssh
   echo $SSH_PRIVATE_KEY > /root/.ssh/id_rsa
   ssh -vvv git@github.com
 fi
