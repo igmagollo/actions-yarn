@@ -22,6 +22,7 @@ fi
 if [ -n "$SSH_PRIVATE_KEY" ]; then
   mkdir ~/.ssh
   echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa
+  ssh -vvv git@github.com
 fi
 
 sh -c "yarn $*"
