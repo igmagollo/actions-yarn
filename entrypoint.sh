@@ -26,7 +26,7 @@ if [ -n "$SSH_PRIVATE_KEY" ]; then
   chmod 400 /root/.ssh/id_rsa
   ssh-keygen -y -f /root/.ssh/id_rsa > /root/.ssh/id_rsa.pub
   ssh -vvv git@github.com
-  ssh-keyscan gitlab.com >> /root//.ssh/known_hosts
+  ssh-keyscan github.com >> /root/.ssh/known_hosts
   chmod 644 /root/.ssh/known_hosts
 
 fi
