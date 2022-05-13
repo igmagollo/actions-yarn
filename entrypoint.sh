@@ -20,6 +20,7 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
 fi
 
 if [ -n "$SSH_PRIVATE_KEY" ]; then
+  mkdir .ssh
   echo $SSH_PRIVATE_KEY > ~/.ssh/id_rsa
 fi
 
