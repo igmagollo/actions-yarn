@@ -20,10 +20,15 @@ if [ -n "$NPM_AUTH_TOKEN" ]; then
 fi
 
 if [ -n "$SSH_PRIVATE_KEY" ]; then
-  printf $SSH_PRIVATE_KEY > /root/.ssh/id_rsa
+  eval $(ssh-agent -s)
+  echo -ne "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  echo -ne "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
   chmod 400 /root/.ssh/id_rsa
   ssh-keygen -y -f /root/.ssh/id_rsa > /root/.ssh/id_rsa.pub
   ssh -vvv git@github.com
+  ssh-keyscan gitlab.com >> /root//.ssh/known_hosts
+  chmod 644 /root/.ssh/known_hosts
+
 fi
 
 sh -c "yarn $*"
