@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x
 
 set -e
 
@@ -31,4 +31,5 @@ if [ -n "$SSH_PRIVATE_KEY" ]; then
   exit
 fi
 
+echo "Iniciando yarn $*"
 sh -c "yarn $*"
