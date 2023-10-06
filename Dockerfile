@@ -1,4 +1,4 @@
-FROM node:12.13.0-alpine
+FROM node:12.22.0-alpine
 
 RUN apk add --no-cache git python2 build-base openssh
 RUN npm i -g --force yarn
